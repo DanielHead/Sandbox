@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model UnitTestingExample.UI.Models.IndexViewModel
+<div class="jumbotron">
+    <h1>Unit testing example website</h1>
+    <p class="lead">This is an example solution developed to help demonstrate how all areas of the .NET application can be unit tested.</p>
+    @*<p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+   
+    <div class="col-md-4">
+        @Html.ValidationSummary()
+
+        @using (Html.BeginForm()) 
+        {
+        
+            <h2>Enter a value</h2>
+            <p>Lorem ipsum.</p>
+            
+            @Html.TextBoxFor(m => m.Value)
+           
+            <input class="btn btn-default" type="submit" value="Submit" />        
+        }
+
+
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
