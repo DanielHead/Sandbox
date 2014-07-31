@@ -11,17 +11,21 @@ namespace UnitTestingExample.UI.ServiceChannelFactory
     {
         const string EndpointName = "BasicHttpBinding_IExampleService";
         
+        /// <summary>
+        /// This is the proxy client which is used by the controllers.
+        /// Note: all methods need to be virtual to allow mocking.
+        /// </summary>
         public UnitTestingExampleClient(): base(EndpointName)
 	    {
            
         }
 
-        public virtual ExampleStatus DoSomeExampleStuff(int id) // Needs to be virtual so it can be mocked
+        public virtual ExampleStatus DoSomeExampleStuff(int id) 
         {
             return Channel.DoSomeExampleStuff(id);
         }
 
-        public virtual void DoSomethingElse() // Needs to be virtual so it can be mocked
+        public virtual void DoSomethingElse()
         {
             Channel.DoSomethingElse();
         }

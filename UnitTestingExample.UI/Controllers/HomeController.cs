@@ -60,7 +60,6 @@ namespace UnitTestingExample.UI.Controllers
 
         public ActionResult Result()
         {
-            
             return View();
         }
 
